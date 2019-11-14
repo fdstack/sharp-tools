@@ -1,0 +1,34 @@
+{
+  "name": "@fdstack/sharp-tools",
+  "version": "0.1.0",
+  "description": "",
+  "repository": "https://github.com/fdstack/sharp-tools.git",
+  "main": "dist/sharp-tools.js",
+  "module": "dist/sharp-tools.es.js",
+  "author": "Grant Jordan <dev@codebyjordan.com>",
+  "license": "MIT",
+  "scripts": {
+    "types": "tsc --emitDeclarationOnly --declaration",
+    "build": "npm run types && rollup -c",
+    "test": "docker-compose run test",
+    "deploy": "docker-compose run deploy"
+  },
+  "dependencies": {
+    "rxjs": "^6.5.3"
+  },
+  "devDependencies": {
+    "@rollup/plugin-alias": "^2.2.0",
+    "@rollup/plugin-buble": "^0.20.0",
+    "@rollup/plugin-replace": "^2.2.1",
+    "@types/node": "^12.12.7",
+    "@types/sharp": "^0.23.0",
+    "rollup": "^1.26.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-copy": "^3.1.0",
+    "rollup-plugin-generate-package-json": "^3.1.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.2"
+  }
+}
